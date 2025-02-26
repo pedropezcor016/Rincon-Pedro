@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Incluye el CSS de Bootstrap y Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Rincón de Pedro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Rincón Pedro</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/avatar.jpg" alt="">
+            </div>
+            <h1>Pedro López Corral</h1>
+            <h2>Desarrollador de Software</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/pedrolopezcorral/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:corralpedrolopez@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/pedropezcor016" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Pedro.</span> Soy un desarrollador de software natural de un pueblo cercano a Salamanca, España. Actualmente estoy trabajando en proyectos Back-End con Java, SpringBoot, Angular y JS. Siempre estoy dispuesto a aprender nuevas cosas cada día. Actualmente estoy trabajando en proyectos personales que publicaré en mi página web y estoy dispuesto a colaborar en proyectos open-source para la comunidad</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Email</strong>
+                            corralpedrolopez@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            pedrolopezcorral.com
+                        </li>
+                        <li>
+                            <strong>Trabajo</strong>
+                            <span>Desarrollor de Software Backend</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <button onclick="descargarPDF()">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+            <div class="alert alert-danger" id="alerta" role="alert" style="display:none;">
+                No se pudo descargar el PDF.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO - proximamente</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="..." alt="">
+                    <div class="overlay">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/pedrolopezcorral/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:corralpedrolopez@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/pedropezcor016" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p style="text-align: center;">@Copyright 2025 - Todos los derechos reservados - El Rincón de Pedro</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Incluye el JavaScript de Bootstrap, Font Awesome y sus dependencias -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
